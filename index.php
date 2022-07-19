@@ -34,6 +34,7 @@ include 'assets/include/header.php'; ?>
                     veritatis, placeat, ab molestiae velit inventore exercitationem consequuntur blanditiis omnis
                     beatae. Dolor iste excepturi ratione soluta quas culpa voluptatum repudiandae harum non.</p>
                 <a href="<?= config('info/cv') ?> " target="_blank" title="Shiko CV-n"><i>getCV('pdf');</i></a>
+                <a href="<?= config('info/github') ?> " target="_blank" title="Shiko CV-n"><i>goTo('github');</i></a>
             </div>
         </div>
     </div>
@@ -269,10 +270,10 @@ $posts = $post->db->sql('
                         </div>
                     </div>
                     <div class="row">
-                        <i class="fas fa-map-marker-alt"></i>
+                    <i class="fa-brands fa-linkedin"></i>
                         <div class="info">
-                            <div class="head">Adresa:</div>
-                            <div class="sub-title"><?= config('info/address') ?> </div>
+                            <div class="head">Linkedin :</div>
+                            <div class="sub-title" style="color: var(--light-colot)"><a href="<?= config('info/linkedin') ?>">Alpet Gexha</a> </div>
                         </div>
                     </div>
                     <div class="row">
