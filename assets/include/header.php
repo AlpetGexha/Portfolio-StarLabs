@@ -23,9 +23,6 @@
     <meta property="og:image:height" content="200" />
     <meta property="og:image:alt" content="AlpetG" />
     <meta property="og:locale" content="en_GB" />
-
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= config('info/app_name') ?></title>
     <link rel="stylesheet" href="assets/css/style.css">

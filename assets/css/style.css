@@ -155,8 +155,8 @@ body {
 
 /* Content */
 section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 label {
@@ -321,7 +321,7 @@ section .title::after {
     position: absolute;
     bottom: -8px;
     left: 50%;
-    font-size: 20px;
+    font-size: 15px;
     color: var(--main-color);
     padding: 0 5px;
     background: var(--light-background);
@@ -611,7 +611,7 @@ section .title::after {
 .services .title::after,
 .teams .title::after {
     background: var(--light-background);
-    content: "what i provide";
+    content: "service";
 }
 
 
@@ -772,7 +772,7 @@ section .title::after {
 # contact
 --------------------------------------------------------------*/
 .contact .title::after {
-    content: "get in touch";
+    content: "Kontaktoni";
 }
 
 .contact .contact-content .column {
@@ -1266,11 +1266,6 @@ footer span a:hover {
     text-decoration: underline;
 }
 
-
-/*--------------------------------------------------------------
-# Responsive Media Query Start
---------------------------------------------------------------*/
-
 .table {
     border-collapse: collapse;
     width: 100%;
@@ -1449,6 +1444,9 @@ footer span a:hover {
 @media (max-width: 421px) {
     .skills .skills-content .skills-img img {
         width: 100px;
+    }
+    .title::after{
+        font-size: 10px;
     }
 }
 

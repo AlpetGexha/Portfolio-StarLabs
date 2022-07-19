@@ -1,4 +1,5 @@
-<?php use Controller\PostController;
+<?php
+use Controller\PostController;
 
 include 'assets/include/header.php'; ?>
 
@@ -34,7 +35,7 @@ include 'assets/include/header.php'; ?>
                     veritatis, placeat, ab molestiae velit inventore exercitationem consequuntur blanditiis omnis
                     beatae. Dolor iste excepturi ratione soluta quas culpa voluptatum repudiandae harum non.</p>
                 <a href="<?= config('info/cv') ?> " target="_blank" title="Shiko CV-n"><i>getCV('pdf');</i></a>
-                <a href="<?= config('info/github') ?> " target="_blank" title="Shiko CV-n"><i>goTo('github');</i></a>
+                <a href="<?= config('info/github') ?> " target="_blank" title="Github"><i>goTo('github');</i></a>
             </div>
         </div>
     </div>
@@ -42,19 +43,19 @@ include 'assets/include/header.php'; ?>
 <style>
     @media (max-width: 928px) {
 
-    .about .about-content .left img {
-        height: 300px;
-        width: 300px;
+        .about .about-content .left img {
+            height: 300px;
+            width: 300px;
+        }
     }
-}
 
     @media (max-width: 777px) {
 
-    .about .about-content .left img {
-        height: 260px;
-        width: 260px;
+        .about .about-content .left img {
+            height: 260px;
+            width: 260px;
+        }
     }
-}
 </style>
 
 <!-- services section start -->
@@ -134,6 +135,15 @@ include 'assets/include/header.php'; ?>
                     flex-wrap: wrap;
                     justify-content: center;
                 }
+
+                @media (max-width: 421px) {
+                    .skills .skills-content .skills-img img {
+                        width: 100px;
+                    }
+                    h2.title {
+                        font-size: 30px;
+                    }
+                }
             </style>
             <!-- <div class="column left">
                 <div class="text">My creative skills & experiences.</div>
@@ -206,16 +216,16 @@ $posts = $post->db->sql('
 
 ?>
 <section class="blog max-width" id="blog">
-    <?php foreach ($posts as $post): ?>
+    <?php foreach ($posts as $post) : ?>
         <a href="single.php?slug=<?= $post->slug ?> ">
             <div class="card">
                 <div class="card__header">
-                    <img loading="lazy" src="<?= $post->image ?>" alt="<?= $post->title ?>" title="<?= $post->title ?>"
-                         class="" width="600">
+                    <img loading="lazy" src="<?= $post->image ?>" alt="<?= $post->title ?>" title="<?= $post->title ?>" class="" width="600">
                 </div>
                 <div class="card__body">
                     <?php
-                    $post_categories = $db->sql('
+                    $post_categories = $db->sql(
+                        '
                             SELECT 
                                * 
                             FROM
@@ -226,19 +236,18 @@ $posts = $post->db->sql('
                     )->results();
                     ?>
                     <div class="tags" style="display:flex;">
-                        <?php foreach ($post_categories as $category): ?>
+                        <?php foreach ($post_categories as $category) : ?>
                             <span class="tag tag-red"><?= $category->title ?></span>
                         <?php endforeach; ?>
                     </div>
 
                     <!--                    <span class="tag tag-red">tag tag-red</span>-->
-                    <h4><?= substr($post->title , 0, 32) . '...'; ?></h4>
-                    <p><?= substr($post->body , 0, 50) . '...';?></p>
+                    <h4><?= substr($post->title, 0, 32) . '...'; ?></h4>
+                    <p><?= substr($post->body, 0, 50) . '...'; ?></p>
                 </div>
                 <div class="card__footer">
                     <div class="user">
-                        <img loading="lazy" src="assets/img/logo.svg" width="40px" alt="user__image"
-                             class="user__image">
+                        <img loading="lazy" src="assets/img/logo.svg" width="40px" alt="user__image" class="user__image">
                         <div class="user__info">
                             <h5>Alpet Gexha</h5>
                             <small><?= Time::timeAgo2($post->created_at) ?></small>
@@ -270,7 +279,7 @@ $posts = $post->db->sql('
                         </div>
                     </div>
                     <div class="row">
-                    <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-linkedin"></i>
                         <div class="info">
                             <div class="head">Linkedin :</div>
                             <div class="sub-title" style="color: var(--light-colot)"><a href="<?= config('info/linkedin') ?>">Alpet Gexha</a> </div>
@@ -308,7 +317,7 @@ $posts = $post->db->sql('
                             header('location: index');
                             Session::flash('success', 'Mesazhi u dergua me sukses! Faleminderit për suportin tuaj!');
                             Input::reset();
-//                            Go::to('/index.php');
+                            //                            Go::to('/index.php');
                         } else {
                             $x->getError();
                         }
@@ -320,32 +329,22 @@ $posts = $post->db->sql('
                 <form action="" method="POST">
                     <div class="fields">
                         <div class="field name">
-                            <input class="input-form" type="text" name="emri" placeholder="Emri" required autocomplete
-                                   value="<?= e(Input::get('emri')) ?>"
-                                   oninvalid="this.setCustomValidity('Ju lutem shkruani Emrin');"
-                                   oninput="this.setCustomValidity('');">
+                            <input class="input-form" type="text" name="emri" placeholder="Emri" required autocomplete value="<?= e(Input::get('emri')) ?>" oninvalid="this.setCustomValidity('Ju lutem shkruani Emrin');" oninput="this.setCustomValidity('');">
                         </div>
                         <div class="field email">
-                            <input class="input-form" type="email" name="email" value="<?= e(Input::get('email')) ?>"
-                                   placeholder="Email" required autocomplete
-                                   oninvalid="this.setCustomValidity('Ju lutem shkruani Emailin');"
-                                   oninput="this.setCustomValidity('');">
+                            <input class="input-form" type="email" name="email" value="<?= e(Input::get('email')) ?>" placeholder="Email" required autocomplete oninvalid="this.setCustomValidity('Ju lutem shkruani Emailin');" oninput="this.setCustomValidity('');">
                         </div>
                     </div>
                     <div class="field">
-                        <input class="input-form" type="text" name="subject" placeholder="Subjekti" required
-                               autocomplete value="<?= e(Input::get('subject')) ?>"
-                               oninvalid="this.setCustomValidity('Ju lutem shkruani Subjektin')"
-                               oninput=" this.setCustomValidity('')" ;>
+                        <input class="input-form" type="text" name="subject" placeholder="Subjekti" required autocomplete value="<?= e(Input::get('subject')) ?>" oninvalid="this.setCustomValidity('Ju lutem shkruani Subjektin')" oninput=" this.setCustomValidity('')" ;>
                     </div>
                     <div class="field textarea">
-                        <textarea class="textarea-form" name="message" cols="30" rows="10" placeholder="Message.."
-                                  required><?= e(Input::get('message')) ?></textarea>
+                        <textarea class="textarea-form" name="message" cols="30" rows="10" placeholder="Message.." required><?= e(Input::get('message')) ?></textarea>
                     </div>
                     <div class="button-area">
                         <!-- style="display: flex; justify-content: end;" -->
-                        <input type="hidden" name="token" value="<?= Token::get() ?>"/>
-                        <input type="submit" class="btn" value="sendMessage();"/>
+                        <input type="hidden" name="token" value="<?= Token::get() ?>" />
+                        <input type="submit" class="btn" value="sendMessage();" />
                     </div>
                 </form>
             </div>
@@ -415,7 +414,7 @@ $posts = $post->db->sql('
             let section = select(navbarlink.hash)
             if (!section) return
             if (position >= section.offsetTop && position <= (section.offsetTop + section
-                .offsetHeight)) {
+                    .offsetHeight)) {
                 navbarlink.classList.add('active')
             } else {
                 navbarlink.classList.remove('active')
