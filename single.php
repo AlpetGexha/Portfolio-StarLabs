@@ -57,6 +57,8 @@ $db->sql('UPDATE posts SET views = views + 1 WHERE id = ?', [$row->id]);
                                     <i class="far fa-calendar-alt"><?= strftime('%e %B, %Y', strtotime($row->created_at)) ?></i>
                                     <i class="far fa-eye fa-x2"><?= $row->views ?></i>
                                     <i class="far fa-user fa-x2"> <?= config('info/name') ?> </i>
+                                    <i class="far fa-book"> <?= getReadTime($row->body) ?> </i>
+                                    
                                 </a>
                             </li>
 

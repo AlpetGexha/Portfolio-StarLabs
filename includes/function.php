@@ -81,12 +81,31 @@ function slug($text)
     return slugify($text, '-');
 }
 
+
+/**
+ * Funksioni për llogaritjen e kohës së parashikuar të leximit të tekstit të dhënë.
+ * 
+ * @param string $text 
+ * @param string $wpm 
+ * @return Array
+ */
+function getReadTime($allcontent = '', int $WPM = 200)
+{
+    $total_word = str_word_count(strip_tags($allcontent));
+    $m = floor($total_word / $WPM);
+    $s = floor($total_word % $WPM  / ($WPM  / 60));
+    // $estimateTime = $m . ' m' . ($m == 1 ? '' : 's') . ', ' . $s . ' s' . ($s == 1 ? '' : 's');
+    $estimateTime =   $m == 0 ? 1 .' minut' : $m.' minuta' ;
+    return $estimateTime;
+}
+
+
 function stringGenerate($len = 15)
 {
     $big = "QWERTYUIOPASDFGHJKLZXCVBNM";
     $small = "qwertyuiopasdfghjklzxcvbnm";
     $number = "1234567890";
-//    $symbol = "!@#$%^&*?*";
+    //    $symbol = "!@#$%^&*?*";
     $token = $big . $small . $number;
     $token = str_shuffle($token);
     $token = substr($token, 0, $len);
@@ -112,14 +131,11 @@ function getErrors()
     if (Session::exist('success')) {
         echo '<span style="color: green" "><strong>' . Session::flash('success') . '</strong></span>';
     }
-    ?>
+?>
 
 
     <?php
     if (Session::exist('error')) {
         echo '<span style="color: red" "><strong>' . Session::flash('error') . '</strong></span>';
     }
-
 }
-
-

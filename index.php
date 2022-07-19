@@ -38,6 +38,24 @@ include 'assets/include/header.php'; ?>
         </div>
     </div>
 </section>
+<style>
+    @media (max-width: 928px) {
+
+    .about .about-content .left img {
+        height: 300px;
+        width: 300px;
+    }
+}
+
+    @media (max-width: 777px) {
+
+    .about .about-content .left img {
+        height: 260px;
+        width: 260px;
+    }
+}
+</style>
+
 <!-- services section start -->
 <section class="services" id="services">
     <div class="max-width">
@@ -213,8 +231,8 @@ $posts = $post->db->sql('
                     </div>
 
                     <!--                    <span class="tag tag-red">tag tag-red</span>-->
-                    <h4><?= $post->title ?></h4>
-                    <p><?= $post->title ?></p>
+                    <h4><?= substr($post->title , 0, 32) . '...'; ?></h4>
+                    <p><?= substr($post->body , 0, 50) . '...';?></p>
                 </div>
                 <div class="card__footer">
                     <div class="user">
