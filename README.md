@@ -4,6 +4,8 @@ Projekti "portfolio" për intership në StarLab
 
 Teknollogjia e përdorur: HTML, CSS, JavaScrip, PHP, MySQLi
 
+Demo: [alpetg.live](www.alpetg.live/)
+
 <details open>
 <summary>Light Mode</summary>
 
@@ -33,3 +35,5 @@ password: Alpet123
  - css file             => /assets/css/
  - js file              => /assets/js/
  - php "component"      => /assets/include/
+ 
+ 
