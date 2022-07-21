@@ -47,7 +47,7 @@ $field = [
     'facebook' => con($info->facebook,'https://www.facebook.com/alpet.gexha'),
     'twitter' => con($info->twitter,'https://twitter.com/alpetgexha'),
     'instagram' => con($info->instagram,'https://www.instagram.com/alpetgexha'),
-    'linkedin' => con($info->linkedin,'https://www.linkedin.com/in/alpet-gexha-b9a8b917b/'),
+    'linkedin' => con($info->linkedin,'https://www.linkedin.com/in/alpet-gexha-499b071a3/'),
     'github' => con($info->github,'https://github.com/AlpetGexh'),
     'cv' => con('https://drive.google.com/file/d/1uO01zQkiozJ0kryjRz9Tq2Z2bOKZoZhw/view?usp=sharing'),
 ];
