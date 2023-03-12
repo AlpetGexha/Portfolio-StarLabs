@@ -1,6 +1,424 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --main-color: #dc143c;
+    --nav-link: #767676;
+    --light-background: #eef1f4;
+    --light-background-2: #fff;
+    --light-color: #111;
+
+    --dark-background: #111;
+    --dark-background-2: #222;
+    --dark-color: #fff;
+
+    --shadow-sm: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+    --shadow-md: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
+
+    --shadow-dark-sm: 0 .125rem .25rem rgba(255, 255, 255, 0.075) !important;
+    --shadow-dark-md: 0 .5rem 1rem rgba(255, 255, 255, 0.15) !important;
+    --shadow-dark-lg: 0 1rem 3rem rgba(255, 255, 255, .175) !important;
+    --inner-shadow: inset 29px -66px 48px 24px rgba(0, 0, 0, 0.32);
+
+    --select-border: #393939;
+    --select-focus: #101484;
+    --select-arrow: var(--select-border);
+}
+
+/*--------------------------------------------------------------
+# Main Style
+--------------------------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /*outline: 1px solid limegreen !important;*/
+}
+
+@-webkit-keyframes target-fade {
+    0% {
+        background-color: rgba(255, 0, 0, 0.1);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0);
+    }
+}
+
+@-moz-keyframes target-fade {
+    0% {
+        background-color: rgba(255, 0, 0, 0.1);
+    }
+
+    100% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/**********  Scrollbar **********/
+
+html::-webkit-scrollbar {
+    width: 15px;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #bebebe;
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(86, 83, 83);
+}
+
+body {
+    background-color: var(--light-background);
+    /* color: #111; */
+}
+
+/* Content */
+
+label {
+    display: inline-block;
+    cursor: default;
+}
+
+input {
+    box-shadow: var(--shadow-md);
+    background: var(--light-background-2);
+    color: var(--light-color);
+}
+
+.mb-3 {
+    margin-bottom: 1.5rem;
+}
+/**************** Multi Select ****************/
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+/*  target the elemenent after the label*/
+
+/*--------------------------------------------------------------
+# Home Style
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Aboutme Style
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Service Style
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Skill
+--------------------------------------------------------------*/
+
+/* 
+.skills .skills-content .column {
+    width: calc(50% - 30px);
+}
+
+.skills .skills-content .left .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skills .skills-content .left p {
+    text-align: justify;
+}
+
+.skills .skills-content .left a {
+    display: inline-block;
+    background: var(--main-color);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500.php;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid var(--main-color);
+    transition: all 0.3s ease;
+}
+
+.skills .skills-content .left a:hover {
+    color: var(--main-color);
+    background: none;
+}
+
+.skills .skills-content .right .bars {
+    margin-bottom: 15px;
+}
+
+.skills .skills-content .right .info {
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .skills-content .right span {
+    font-weight: 500.php;
+    font-size: 18px;
+}
+
+.skills .skills-content .right .line {
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+
+.skills .skills-content .right .line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: var(--main-color);
+}
+
+.skills-content .right .html::before {
+    width: 90%;
+}
+
+.skills-content .right .css::before {
+    width: 60%;
+}
+
+.skills-content .right .js::before {
+    width: 80%;
+}
+
+.skills-content .right .php::before {
+    width: 50%;
+}
+
+.skills-content .right .mysql::before {
+    width: 70%;
+} */
+
+/*--------------------------------------------------------------
+# contact
+--------------------------------------------------------------*/
+
+.input-form {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+}
+
+.input-form:focus {
+    border-color: #b3b3b3;
+}
+
+.btn {
+    color: #fff;
+    display: block;
+    width: 160px !important;
+    height: 45px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    background: var(--main-color);
+    border: 2px solid var(--main-color);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    color: var(--main-color);
+    background: none;
+}
+
+
+/*--------------------------------------------------------------
+# Blog
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Single Blog
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Login And Register Form
+--------------------------------------------------------------*/
+
+.login-form {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form .container {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 20px;
+}
+
+.login-form .container .forms {
+    display: flex;
+    align-items: center;
+    height: 440px;
+    width: 200%;
+    transition: height 0.2s ease;
+}
+
+
+.login-form .container .form {
+    width: 50%;
+    padding: 30px;
+    background-color: #fff;
+    transition: margin-left 0.18s ease;
+}
+
+.login-form .container .form .title {
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+
+.login-form .form .input-field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 2.3rem;
+}
+
+.login-form .input-field input {
+    position: inline;
+    height: 100%;
+    width: 100%;
+    padding: 4 35px;
+}
+
+.login-form .input-field i {
+    position: absolute;
+    top: 100%;
+    margin-top: 1px;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+
+.login-form .input-field input:is(:focus, :valid) ~ i {
+    color: #4070f4;
+}
+
+.login-form .input-field i.icon {
+    left: 0;
+}
+
+.login-form .input-field i.showHidePw {
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.login-form .form .checkbox-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.login-form .checkbox-text .checkbox-content {
+    display: flex;
+    align-items: center;
+}
+
+.login-form .checkbox-content input {
+    margin: 0 8px -2px 4px;
+    accent-color: #4070f4;
+}
+
+.login-form .input-field label {
+    margin-bottom: 0.5rem;
+}
+
+
+.login-form .form .text {
+    color: #333;
+    font-size: 14px;
+}
+
+.login-form .form a.text {
+    color: #4070f4;
+    text-decoration: none;
+}
+
+.login-form .form a:hover {
+    text-decoration: underline;
+}
+
+.login-form .form .button {
+    margin-top: 35px;
+}
+
+.login-form .form .button .btn {
+    width: 100% !important;
+}
+
+.login-form .form .login-signup {
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Admin Pannel
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Responsive Media Query Start
+--------------------------------------------------------------*/
+
+
+@media (max-width: 421px) {
+    .title::after{
+        font-size: 10px;
+    }
+}
 
 :root {
     --main-color: #dc143c;
@@ -47,27 +465,21 @@ html .dark::-webkit-scrollbar-track {
     background-color: #202424;
 }
 
-html .darkF::-webkit-scrollbar-thumb {
-    background: #4e4e4e;
-    border-radius: 25px;
-}
 .dark h2,
 .dark p,
-.dark .about .about-content .text
-dark .text {
+.dark .about .about-content .text dark .text {
     color: var(--light-color)
 }
 
-h1,
+
 h2,
-h3,
 h4,
 h5,
-h6,
 p {
     color: var(--light-color) !important;
 }
-p{
+
+p {
     margin: 0;
     font-size: 0.9em;
     line-height: 2em;
@@ -80,8 +492,8 @@ p{
     font-size: 2rem;
     margin: 2rem 0;
     background: linear-gradient(to right,
-    rgb(209, 16, 16) 0%,
-    rgb(65, 13, 13) 100%);
+            rgb(209, 16, 16) 0%,
+            rgb(65, 13, 13) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -97,7 +509,6 @@ p{
     text-decoration: none;
     /*outline: 1px solid limegreen !important;*/
 }
-
 
 :target {
     scroll-margin-top: 50px;
@@ -171,38 +582,8 @@ textarea {
     color: var(--light-color);
 }
 
-.mb-3 {
-    margin-bottom: 1.5rem;
-}
-
-.mt-5 {
-    margin-top: 3rem;
-}
-
-.w-auto {
-    width: auto;
-}
-
-.form-label {
-    margin-bottom: 0.5rem;
-}
-
-.shadow-sm {
-    box-shadow: var(--shadow-sm);
-}
-
 .shadow {
     box-shadow: var(--shadow-md);
-}
-
-.shadow-lg {
-    box-shadow: var(--shadow-lg);
-}
-
-.inner-shadow {
-    -webkit-box-shadow: var(--inner-shadow);
-    -moz-box-shadow: var(--inner-shadow);
-    box-shadow: var(--inner-shadow);
 }
 
 .max-width {
@@ -211,73 +592,11 @@ textarea {
     margin: auto;
 }
 
-.flex-end {
-    display: flex;
-    justify-content: flex-end;
-}
 /**************** Multi Select ****************/
-select {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-color: transparent;
-    border: none;
-    padding: 0 1em 0 0;
-    margin: 0;
-    width: 100%;
-    /*font-family: inherit;*/
-    font-size: inherit;
-    cursor: inherit;
-    line-height: inherit;
-    z-index: 1;
-    outline: none;
-}
-.select {
-    display: grid;
-    grid-template-areas: "select";
-    align-items: center;
-    position: relative;
-    min-width: 15ch;
-    max-width: 30ch;
-    border: 1px solid var(--select-border);
-    border-radius: 0.25em;
-    padding: 0.25em 0.5em;
-    /*font-size: 1.25rem;*/
-    cursor: pointer;
-    line-height: 1.1;
-    background: linear-gradient(to bottom, #fff 0%, #e5e5e5 100%);
-}
-.select select, .select::after {
-    grid-area: select;
-}
-.select::after {
-    content: "";
-    justify-self: end;
-    width: 0.8em;
-    height: 0.5em;
-    background-color: var(--select-arrow);
-    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-}
-
-select[multiple] {
-    padding-right: 0;
-    height: 7rem;
-}
-
-select:focus + .focus {
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    right: -1px;
-    bottom: -1px;
-    border: 2px solid var(--select-focus);
-    border-radius: inherit;
-}
 
 .about,
 .services,
 .skills,
-.teams,
 .contact,
 footer {
     font-family: "Poppins", sans-serif;
@@ -286,8 +605,7 @@ footer {
 .about .about-content,
 .services .serv-content,
 .skills .skills-content,
-.contact .contact-content,
-.blog .blog-content {
+.contact .contact-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -339,17 +657,21 @@ section .title::after {
     padding: 30px 0;
     font-family: "Ubuntu", sans-serif;
     transition: all 0.3s ease;
-}
-
-.navbar.sticky {
-    padding: 15px 0;
-    background: var(--main-color);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
 .navbar .max-width {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.navbar.sticky {
+    padding: 15px 0;
+    background: var(--main-color);
 }
 
 .navbar .logo a {
@@ -361,10 +683,6 @@ section .title::after {
 .navbar .logo a span {
     color: var(--main-color);
     transition: all 0.3s ease;
-}
-
-.navbar.sticky .logo a span {
-    color: #fff;
 }
 
 .navbar .menu li {
@@ -384,10 +702,6 @@ section .title::after {
 
 .navbar .menu li a:hover {
     color: var(--main-color);
-}
-
-.navbar.sticky .menu li a:hover {
-    color: #fff;
 }
 
 .navbar .checkbox {
@@ -426,7 +740,7 @@ section .title::after {
 }
 
 /*  target the elemenent after the label*/
-.navbar .checkbox:checked + .label .ball {
+.navbar .checkbox:checked+.label .ball {
     transform: translateX(24px);
 }
 
@@ -443,6 +757,12 @@ section .title::after {
     font-size: 23px;
     cursor: pointer;
     display: none;
+}
+
+.scroll-up-btn.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .scroll-up-btn {
@@ -463,12 +783,6 @@ section .title::after {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
-}
-
-.scroll-up-btn.show {
-    bottom: 30px;
-    opacity: 1;
-    pointer-events: auto;
 }
 
 .scroll-up-btn:hover {
@@ -597,19 +911,16 @@ section .title::after {
 /*--------------------------------------------------------------
 # Service Style
 --------------------------------------------------------------*/
-.services,
-.teams {
+.services {
     color: var(--light-color);
 }
 
-.services .title::before,
-.teams .title::before {
+.services .title::before {
     background: var(--light-color);
 
 }
 
-.services .title::after,
-.teams .title::after {
+.services .title::after {
     background: var(--light-background);
     content: "service";
 }
@@ -908,15 +1219,6 @@ section .title::after {
     margin: 10px;
 }
 
-.blog .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 100%;
-    margin-block: 2rem;
-    gap: 2rem;
-}
-
 .blog .title::after {
     content: "What I ....";
 }
@@ -957,20 +1259,8 @@ section .title::after {
     font-size: 0.75rem;
 }
 
-.blog .tag + .tag {
+.blog .tag+.tag {
     margin-left: 0.5em;
-}
-
-.blog .tag-blue {
-    background: #56ccf2;
-    background: linear-gradient(to bottom, #2f80ed, #56ccf2);
-    color: var(--light-color);
-}
-
-.blog .tag-brown {
-    background: #d1913c;
-    background: linear-gradient(to bottom, #ffd194, #d1913c);
-    color: #fafafa;
 }
 
 .blog .tag-red {
@@ -1004,247 +1294,18 @@ section .title::after {
     border-radius: 50%;
 }
 
-.blog .user__info > small {
+.blog .user__info>small {
     color: rgb(131, 131, 131);
 }
 
 /*--------------------------------------------------------------
 # Single Blog
 --------------------------------------------------------------*/
-.image-container {
-    background-image: url("assets/img/banner-2.jpg");
-    background-size: cover;
-    position: relative;
-    height: 340px;
-    box-shadow: var(--inner-shadow);
-}
-
-.image-container .text {
-    color: var(--light-color);
-    font-size: 7vw;
-    font-weight: bold;
-    margin: 0 auto;
-    padding: 10px;
-    width: 50%;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
-.single_post p {
-    font-family: 'Open Sans', Arial, sans-serif;
-    margin-bottom: 16px;
-    line-height: 2.3;
-    letter-spacing: 2px;
-
-}
-
-.single_post_info {
-    position: relative;
-    overflow: hidden;
-}
-
-.single_post_info_show {
-    width: calc(100% - 35px);
-    background: rgba(14, 15, 16, 0.65);
-    padding: 32px;
-    margin: 16px 20px 16px 16px;
-    position: absolute;
-    bottom: 0;
-}
-
-.single_post_info_show ul {
-    list-style-type: none;
-}
-
-
-.single_post_info_show ul li a {
-    font-size: 0.9em;
-    letter-spacing: 1px;
-    color: #fff;
-    margin-right: 99px;
-}
-
-.single_post_info_show ul li i {
-    margin-right: 5px;
-}
-
-.single_post_info_show ul li a:hover {
-    color: var(--main-color);
-    opacity: 0.9;
-    text-decoration: none;
-}
-
-.single_post .card img {
-    width: auto;
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    padding: 1rem;
-}
-
-.single_post .card {
-    background-color: var(--light-background-2);
-    border-radius: 15px;
-    box-shadow: var(--shadow-md);
-}
-
-.single_post .card .card__header h2 {
-    font-size: 40px;
-    font-weight: bold;
-    padding: 1rem;
-    text-align: center;
-    word-break: break-all;
-}
-
-.single_post .card .card__body p {
-    font-size: 20px;
-    letter-spacing: 1.5px;
-    padding: 1rem;
-    text-align: center;
-    word-break: break-all;
-}
 
 
 /*--------------------------------------------------------------
 # Login And Register Form
 --------------------------------------------------------------*/
-
-.login-form {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.login-form .container {
-    position: relative;
-    max-width: 430px;
-    width: 100%;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin: 0 20px;
-}
-
-.login-form .container .forms {
-    display: flex;
-    align-items: center;
-    height: 440px;
-    width: 200%;
-    transition: height 0.2s ease;
-}
-
-
-.login-form .container .form {
-    width: 50%;
-    padding: 30px;
-    background-color: #fff;
-    transition: margin-left 0.18s ease;
-}
-
-.login-form .container .signup {
-    opacity: 0;
-    transition: opacity 0.09s ease;
-}
-
-.login-form .container .form .title {
-    position: relative;
-    font-size: 27px;
-    font-weight: 600;
-}
-
-
-.login-form .form .input-field {
-    position: relative;
-    height: 50px;
-    width: 100%;
-    margin-bottom: 2.3rem;
-}
-
-.login-form .input-field input {
-    position: inline;
-    height: 100%;
-    width: 100%;
-    padding: 4 35px;
-}
-
-.login-form .input-field i {
-    position: absolute;
-    top: 100%;
-    margin-top: 1px;
-    transform: translateY(-50%);
-    color: #999;
-    font-size: 23px;
-    transition: all 0.2s ease;
-}
-
-.login-form .input-field input:is(:focus, :valid) ~ i {
-    color: #4070f4;
-}
-
-.login-form .input-field i.icon {
-    left: 0;
-}
-
-.login-form .input-field i.showHidePw {
-    right: 0;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.login-form .form .checkbox-text {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 2rem;
-}
-
-.login-form .checkbox-text .checkbox-content {
-    display: flex;
-    align-items: center;
-}
-
-.login-form .checkbox-content input {
-    margin: 0 8px -2px 4px;
-    accent-color: #4070f4;
-}
-
-.login-form .input-field label {
-    margin-bottom: 0.5rem;
-}
-
-
-.login-form .form .text {
-    color: #333;
-    font-size: 14px;
-}
-
-.login-form .form a.text {
-    color: #4070f4;
-    text-decoration: none;
-}
-
-.login-form .form a:hover {
-    text-decoration: underline;
-}
-
-.login-form .form .button {
-    margin-top: 35px;
-}
-
-.login-form .form .button .btn {
-    width: 100% !important;
-}
-
-.login-form .form .login-signup {
-    margin-top: 30px;
-    text-align: center;
-}
 
 
 /*--------------------------------------------------------------
@@ -1266,175 +1327,10 @@ footer span a:hover {
     text-decoration: underline;
 }
 
-.table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-.table td,
-.table th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-
-.table tr:nth-child(even) {
-    background-color: #dddddd;
-}
-
-.table tr:hover {
-    background-color: #bebebe;
-}
-
-.table-responsive {
-    overflow-y: auto;
-}
-
 
 /*--------------------------------------------------------------
 # Admin Pannel
 --------------------------------------------------------------*/
-.admin {
-    display: flex;
-    min-height: 100vh;
-}
-
-.admin .menu-toggle {
-    display: none;
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    width: 60px;
-    height: 60px;
-    border-radius: 99px;
-    background-color: #2e3047;
-    cursor: pointer;
-}
-
-.admin .hamburger {
-    position: relative;
-    top: calc(50% - 2px);
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 32px;
-}
-
-.admin .hamburger > span,
-.admin .hamburger > span::before,
-.admin .hamburger > span::after {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    border-radius: 99px;
-    background-color: #FFF;
-    transition-duration: .25s;
-}
-
-.admin .hamburger > span::before {
-    content: '';
-    top: -8px;
-}
-
-.admin .hamburger > span::after {
-    content: '';
-    top: 8px;
-}
-
-.admin .menu-toggle.is-active .hamburger > span {
-    transform: rotate(45deg);
-}
-
-.admin .menu-toggle.is-active .hamburger > span::before {
-    top: 0;
-    transform: rotate(0deg);
-}
-
-.admin .menu-toggle.is-active .hamburger > span::after {
-    top: 0;
-    transform: rotate(90deg);
-}
-
-.admin .sidebar {
-    flex: 1 1 0;
-    max-width: 300px;
-    padding: 2rem 1rem;
-    background-color: #2e3047;
-}
-
-.admin .sidebar h3 {
-    color: #707793;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    margin-bottom: 0.5em;
-}
-
-.admin .sidebar .menu {
-    margin: 0 -1rem;
-}
-
-.admin .sidebar .menu .menu-item {
-    display: block;
-    padding: 1em;
-    color: #FFF;
-    text-decoration: none;
-    transition: 0.2s linear;
-}
-
-.admin .sidebar .menu .menu-item:hover,
-.admin .sidebar .menu .menu-item.is-active {
-    color: #3bba9c;
-    border-right: 5px solid #3bba9c;
-}
-
-.admin .sidebar .menu .menu-item:hover {
-    border-right: 5px solid #3bba9c;
-}
-
-.admin .content {
-    flex: 1 1 0;
-    padding: 2rem;
-}
-
-.admin .content h1 {
-    color: #3C3F58;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.admin .content p {
-    color: #707793;
-}
-
-@media (max-width: 1024px) {
-    .admin .sidebar {
-        max-width: 200px;
-    }
-}
-
-@media (max-width: 768px) {
-    .admin .menu-toggle {
-        display: block;
-    }
-
-    .admin .content {
-        padding-top: 8rem;
-    }
-
-    .admin .sidebar {
-        position: fixed;
-        top: 0;
-        left: -300px;
-        height: 100vh;
-        width: 100%;
-        max-width: 300px;
-        transition: 0.2s linear;
-    }
-
-    .admin .sidebar.is-active {
-        left: 0;
-    }
-}
 
 /*--------------------------------------------------------------
 # Responsive Media Query Start
@@ -1445,7 +1341,8 @@ footer span a:hover {
     .skills .skills-content .skills-img img {
         width: 100px;
     }
-    .title::after{
+
+    .title::after {
         font-size: 10px;
     }
 }
@@ -1527,10 +1424,6 @@ footer span a:hover {
     .contact .right form .name,
     .contact .right form .email {
         margin: 0;
-    }
-
-    .right form .error-box {
-        width: 150px;
     }
 
     .scroll-up-btn {
@@ -1619,12 +1512,6 @@ footer span a:hover {
     }
 }
 
-@media (max-width: 1024px) {
-    .admin .sidebar {
-        max-width: 200px;
-    }
-}
-
 @media (max-width: 1079px) {
     .blog .card {
         width: 240px
@@ -1665,6 +1552,7 @@ footer span a:hover {
     .navbar .menu.active {
         left: 0;
     }
+
     .navbar .menu li {
         display: block;
     }
